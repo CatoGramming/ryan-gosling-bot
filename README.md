@@ -1,6 +1,5 @@
-# Python API Backend
+# Ryan Gosling Bot
 
-Use this repository as template to start a new Python API Backend
+Big thanks QortexDevs for this template
 
-How to use
-1. Create new repository via «Use this Template» button on Github
+https://github.com/QortexDevs/django-site-backend
