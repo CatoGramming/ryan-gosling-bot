@@ -74,3 +74,6 @@ flake8-pytest-style==1.7
 mypy==1.5.1 
 django-stubs[compatible-mypy]==4.2.4 
 pydantic==2.4.2 
+python-telegram-bot==20.6
+httpx==0.25.1 
+requests==2.31.0 

@@ -22,15 +22,15 @@ services:
       - ALLOWED_HOSTS=*
       - DATABASE_URL=postgres://postgres:postgres@db:5432/postgres
 
-      - SECRET_KEY="m#t7gx#ho3#ccj7(oo^09u5q(%r&nlcn^0e66ar_iisgn_%o*0"
+      - SECRET_KEY=empty
       - DJANGO_SETTINGS_MODULE=app.settings
       - DJANGO_SUPERUSER_PASSWORD=password
       - DJANGO_SUPERUSER_USERNAME=admin
       - DJANGO_SUPERUSER_EMAIL=admin@example.com
 
       - SENTRY_DSN=empty
-      - TELEGRAM_TOKEN=6978931415:AAEqJH7tInmV8cUjjpZ3blGKv2G3hLa8I84
-      - CHAD_GPT_TOKEN=chad-c43846755a0b4043806e15fb28a32f9cud52gu50
+      - TELEGRAM_TOKEN=empty
+      - CHAD_GPT_TOKEN=empty
     command:
       - /bin/bash
       - -c
@@ -56,15 +56,15 @@ services:
       - ALLOWED_HOSTS=*
       - DATABASE_URL=postgres://postgres:postgres@db:5432/postgres
 
-      - SECRET_KEY="m#t7gx#ho3#ccj7(oo^09u5q(%r&nlcn^0e66ar_iisgn_%o*0"
+      - SECRET_KEY=empty
       - DJANGO_SETTINGS_MODULE=app.settings
       - DJANGO_SUPERUSER_PASSWORD=password
       - DJANGO_SUPERUSER_USERNAME=admin
       - DJANGO_SUPERUSER_EMAIL=admin@example.com
 
       - SENTRY_DSN=empty
-      - TELEGRAM_TOKEN=6978931415:AAEqJH7tInmV8cUjjpZ3blGKv2G3hLa8I84
-      - CHAD_GPT_TOKEN=chad-c43846755a0b4043806e15fb28a32f9cud52gu50
+      - TELEGRAM_TOKEN=empty
+      - CHAD_GPT_TOKEN=empty
     volumes:
       - ./app:/code
     command:

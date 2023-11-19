@@ -36,6 +36,8 @@ INSTALLED_APPS = [
     'simple_history',
     'nested_admin',
 
+    'messages_info',
+    'participants',
     'users',
 ]
 
@@ -169,3 +171,6 @@ LANGUAGES = (
     ('en-us', _('English')),
     ('ru-ru', _('Russian')),
 )
+
+TELEGRAM_TOKEN = env('TELEGRAM_TOKEN')
+CHAD_GPT_TOKEN = env('CHAD_GPT_TOKEN')
