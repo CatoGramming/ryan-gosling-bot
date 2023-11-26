@@ -134,7 +134,7 @@ class TelegramExecuteConnector:
         if update.effective_chat.id != self.admin_id:
             context.bot.send_message(
                 chat_id=update.effective_chat.id,
-                text='Вы не админ. Go away:)')
+                text=f'NA. Ваш id или группы {update.effective_chat.id}')
             return None
         await context.bot.send_message(
             chat_id=update.effective_chat.id,

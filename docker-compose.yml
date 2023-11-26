@@ -63,8 +63,8 @@ services:
       - DJANGO_SUPERUSER_EMAIL=admin@example.com
 
       - SENTRY_DSN=empty
-      - TELEGRAM_TOKEN=6978931415:AAEqJH7tInmV8cUjjpZ3blGKv2G3hLa8I84
-      - CHAD_GPT_TOKEN=chad-c43846755a0b4043806e15fb28a32f9cud52gu50
+      - TELEGRAM_TOKEN=6978931415:AAFbxPDrS96VSzNfiTt2xa4Kh21rUwLilq8
+      - CHAD_GPT_TOKEN=chad-cf641f157dcc4c40a431d7e40194d3f3744ht3ud
     volumes:
       - ./app:/code
     command:

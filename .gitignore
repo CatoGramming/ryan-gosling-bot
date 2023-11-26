@@ -141,4 +141,4 @@ cython_debug/
 
 *.gltf
 app/staticfiles/
-docker-compose.yml
+./docker-compose.yml
