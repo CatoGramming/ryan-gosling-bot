@@ -26,7 +26,6 @@ class ChadGptService:
             url=self.chad_url,
             json=payload)
         data_json = request.json()
-        print(data_json)
 
         if not data_json['is_success']:
             error = data_json['error_message']

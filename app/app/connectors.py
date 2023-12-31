@@ -105,6 +105,11 @@ class TelegramExecuteConnector:
             ],
             [
                 InlineKeyboardButton(
+                    'Пожелание на Новый год',
+                    callback_data='new_year'),
+            ],
+            [
+                InlineKeyboardButton(
                     'Ничего не хочу!',
                     callback_data='Хорошо, вы ничего не хотите')],
         ]
@@ -113,6 +118,30 @@ class TelegramExecuteConnector:
 
         await update.message.reply_text(
             'Что хотите?',
+            reply_markup=reply_markup)
+
+    async def get_new_year(
+        self,
+        update: Update,
+        context: ContextTypes.DEFAULT_TYPE
+    ) -> None:
+
+        keyboard = [
+            [
+                InlineKeyboardButton(
+                    'Пожелание на Новый год',
+                    callback_data='new_year'),
+            ],
+            [
+                InlineKeyboardButton(
+                    'Ничего не хочу!',
+                    callback_data='Хорошо, вы ничего не хотите')],
+        ]
+
+        reply_markup = InlineKeyboardMarkup(keyboard)
+
+        await update.message.reply_text(
+            'Привет! Нажми на кнопку, чтобы получить пожелание!',
             reply_markup=reply_markup)
 
     async def get_chat_id_from_tlg(
@@ -253,6 +282,9 @@ class TelegramExecuteConnector:
     def command_edit_message(self):
         return CommandHandler('edit_msg', self.edit_message_text)
 
+    def command_new_year(self):
+        return CommandHandler('new_year', self.get_new_year)
+
     def command_chad(self):
         return CommandHandler('chad', self.get_response_from_chad)
 
@@ -284,7 +316,8 @@ class TelegramExecuteConnector:
         time.sleep(2)
         data = {
             'it_joke': 'Расскажи анекдот про айти',
-            'gosling_joke': 'Расскажи анекдот про Райана Гослинга'
+            'gosling_joke': 'Расскажи анекдот про Райана Гослинга',
+            'new_year': 'Пожелай приятное на новый год',
         }
 
         service = ChadGptService()
@@ -311,6 +344,8 @@ class TelegramExecuteConnector:
         self.application.add_handler(self.command_test_edit())
         self.application.add_handler(
             CommandHandler('give_me_joke', self.inline_key))
+        self.application.add_handler(
+            CommandHandler('new_year', self.get_new_year))
 
         self.application.add_handler(CallbackQueryHandler(self.button))
 
